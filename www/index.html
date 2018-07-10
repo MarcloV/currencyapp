@@ -5,17 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
 <script src="js/script.js" >
-
 </script>
   <title>Currency</title>
 </head>
 <body onload="convertCurrency()">
   <div id="main">
+
     <h1>Convert Currency</h1>
-    <table id="table">
-      <tr>
-        <td><input type="number" id="fromAmount" value="1" onchange="convertCurrency()"> </td>
+
+
+    <table id="table" class="table table-responsive-md">
+        <div class="row">
+
+      <tr class="table-active">
+          <div class="col-md-6">
+        <td><input type="number" id="fromAmount" value="1" onchange="convertCurrency()"> </td></div>
+        </div>
+          <div class="col-md-6">
         <td><select id="from" onchange="convertCurrency()"> <option value="AUD">Australian Dollars (AUD)</option>
           <option value="CAD">Canadian Dollars (CAD)</option>
           <option value="EUR">France (EUR)</option>
@@ -23,8 +31,14 @@
           <option value="GBP">British Pounds(GBP)</option>
         </select> </td>
       </tr>
-      <tr>
-        <td> <input type="text" id="toAmount" disabled> </td>
+      </div>
+      </div>
+
+      <div class="row">
+      <tr class="table-active">
+          <div class="col-md-6">
+        <td> <input type="text" id="toAmount" disabled> </td> </div>
+          <div class="col-md-6">
         <td> <select id="to" onchange="convertCurrency()">
           <option value="AUD">Australian Dollars (AUD)</option>
             <option value="CAD">Canadian Dollars (CAD)</option>
@@ -32,8 +46,14 @@
             <option value="USD" selected>US Dollars (USD)</option>
             <option value="GBP">British Pounds(GBP)</option>
         </select> </td>
-      </tr>
+       </tr>
+      </div>
+       </div>
+
+        </div>
     </table>
+
+
   </div>
 
 </body>
